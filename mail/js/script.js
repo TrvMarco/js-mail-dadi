@@ -5,13 +5,16 @@ console.log('La mail inserita è:',userMail);
 // creo una lista di chi può accedere
 const userMailAccess = ["filippo@gmail.com","mattia@gmail.com","giovanni@gmail.com","luca@gmail.com"];
 // controlla che sia nella lista di chi può accedere
+let userAccess = false;
 for (let i = 0; i < userMailAccess.length; i++){
-    console.log(userMailAccess[i]);
-    if(userMail == userMailAccess[i]){
-        alert("Benvenuto!")
-    }else{
-        alert("Utente non registrato!")
+    if(userMailAccess[i] == userMail){
+        userAccess = true 
     }
-}
+};
+// se la mail è registrata dai il messaggio di benvenuto, altrimenti comunica che l'account è inesistente
+if (userAccess == true){
+    alert("Benvenuto!")
+}else{
+    alert("Account inesistente!")
+};
 
-// stampa un messaggio appropriato sull’esito del controllo.
