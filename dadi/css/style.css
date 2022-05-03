@@ -33,3 +33,9 @@ body{
 .winner{
     text-align: center;
 }
+
+.action{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
