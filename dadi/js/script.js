@@ -8,11 +8,24 @@ let computerNumber = Math.floor(Math.random() * 6) + 1;
 console.log(userNumber);
 console.log(computerNumber);
 
+
+// manipolazione dom
+const userNumberBox = document.querySelector(".user-number");
+const pcNumberBox = document.querySelector(".pc-number");
+
+userNumberBox.innerHTML = userNumber
+pcNumberBox.innerHTML = computerNumber
+
+const result = document.querySelector(".result")
+
 // creare la condizione che permette di vincere a chi ha fatto il numero pìu alto 
 if( userNumber > computerNumber){
-    alert(`"Hai vinto!"${userNumber}"vs"${computerNumber}`)
+    result.innerHTML = "HAI VINTO!"
+    // alert(`"Hai vinto!"${userNumber}"vs"${computerNumber}`)
 }else if(userNumber === computerNumber){
-    alert(`"Pareggio!!"${userNumber}"vs"${computerNumber}`)
+    result.innerHTML = "Pareggio!"
+    // alert(`"Pareggio!!"${userNumber}"vs"${computerNumber}`)
 }else{
-    alert(`"Hai perso!"${computerNumber}"vs"${userNumber}`)
+    result.innerHTML = "HAI PERSO!"
+    // alert(`"Hai perso!"${computerNumber}"vs"${userNumber}`)
 }
